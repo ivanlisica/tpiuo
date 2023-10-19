@@ -1,1 +1,3 @@
-# tpiuo
+-Ime: Ivan
+-Prezime: Lisica
+-Email: ivan.lisica@fer.hr
