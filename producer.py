@@ -15,8 +15,8 @@ async def run():
     auth = requests.auth.HTTPBasicAuth(CLIENT_ID, SECRET_KEY)
     data = {
     'grant_type': 'password',
-    'username': 'ivanlisica1609',
-    'password': 'AzLe9t7e'
+    'username': '',
+    'password': ''
     }
     header = {'User-Agent': 'MyAPI/0.0.1'}
     res = requests.post('https://www.reddit.com/api/v1/access_token',auth=auth, data=data, headers=header)
