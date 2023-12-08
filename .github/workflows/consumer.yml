@@ -22,9 +22,6 @@ jobs:
 
     - name: Run EditorConfig check
       uses: wearerequired/editorconfig-checker-action@v3
-      with:
-        editorconfig-checker-version: 3.3.0
-        editorconfig-checker-args: --exclude-pattern .gitignore
     
   lint:
     runs-on: ubuntu-latest
