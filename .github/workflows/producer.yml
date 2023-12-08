@@ -3,7 +3,7 @@ name: producer
 on:
   push:
     paths:
-      - '**/*.py'
+      - '**/producer.py'
     branches:
       - main  
 
