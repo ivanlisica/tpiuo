@@ -39,7 +39,7 @@ jobs:
         python-version: 3.9
 
     - name: Run linters
-      uses: wearerequired/lint-action@v3
+      uses: wearerequired/lint-action@v2
       with:
           black: true
           flake8: true
