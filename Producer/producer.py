@@ -23,7 +23,7 @@ async def run():
     TOKEN = res.json()['access_token']
     header = {**header, **{'Authorization': f"bearer {TOKEN}"}}
 
-    res = requests.get('https://oauth.reddit.com/r/dataengineering/top', headers=header, params={'t': 'all', 'limit': 10})
+    res = requests.get('https://oauth.reddit.com/r/dataengineering/top', headers=header, params={'t': 'all', 'limit': 12})
     data = res.json()
 
     client = EventHubProducerClient.from_connection_string(conn_str=EVENT_HUB_CONNECTION_STR, eventhub_name=EVENT_HUB_NAME)
