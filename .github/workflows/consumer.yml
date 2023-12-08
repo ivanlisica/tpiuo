@@ -21,7 +21,10 @@ jobs:
         python-version: 3.9
 
     - name: Run EditorConfig check
-      run: editorconfig-checker 
+      uses: wearerequired/editorconfig-checker-action@v3
+      with:
+        editorconfig-checker-version: 3.3.0
+        editorconfig-checker-args: --exclude-pattern .gitignore
     
   lint:
     runs-on: ubuntu-latest
@@ -35,5 +38,8 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Run Linter check
-      run: pylint 
+    - name: Run linters
+      uses: wearerequired/lint-action@v3
+      with:
+          black: true
+          flake8: true
