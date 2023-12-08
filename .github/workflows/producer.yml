@@ -1,9 +1,11 @@
 name: producer
 
 on:
-  pull_request:
+  push:
     paths:
       - '**/*.py'
+    branches:
+      - main  
 
 jobs:
   editorconfig:
@@ -32,7 +34,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-        
+
     - name: Run Linter check
       run: pylint
 
