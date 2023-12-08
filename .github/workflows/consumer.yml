@@ -19,7 +19,7 @@ jobs:
         python-version: 3.9
 
     - name: Run EditorConfig check
-      run: editorconfig-checker
+      run: editorconfig-checker 
     
   lint:
     runs-on: ubuntu-latest
@@ -33,5 +33,5 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Run Flake8
-      run: flake8
+    - name: Run Linter check
+      run: pylint 
