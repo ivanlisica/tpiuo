@@ -8,7 +8,7 @@ EVENT_HUB_CONNECTION_STR = "Endpoint=sb://tpiuolabos.servicebus.windows.net/;Sha
 EVENT_HUB_NAME = "labos1"
 
 async def on_event(partition_context, event):
-    print("Received event from partition: {}".format(partition_context.partition_id))
+    print("Received event: {}".format(partition_context.partition_id))
     print(event.body_as_str())
 
     await partition_context.update_checkpoint(event)
