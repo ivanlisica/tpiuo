@@ -1,4 +1,4 @@
-name: producer
+name: consumer
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         python-version: 3.9
 
     - name: Run EditorConfig check
-      run: editorconfig-checker
+      uses: actions/checkout@v3
     
   lint:
     runs-on: ubuntu-latest
@@ -35,6 +35,6 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Run Linter check
-      run: pylint
-
+    - name: Run linters
+      uses: wearerequired/lint-action@v2
+         
