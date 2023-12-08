@@ -21,7 +21,7 @@ jobs:
         python-version: 3.9
 
     - name: Run EditorConfig check
-      uses: wearerequired/editorconfig-checker-action@v3
+      uses: wearerequired/editorconfig-checker-action@v2
     
   lint:
     runs-on: ubuntu-latest
