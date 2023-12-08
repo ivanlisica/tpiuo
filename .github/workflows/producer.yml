@@ -1,4 +1,4 @@
-name: Run EditorConfig
+name: producer
 
 on:
   pull_request:
