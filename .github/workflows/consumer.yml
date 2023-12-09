@@ -58,7 +58,7 @@ jobs:
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
     - name: Deploy to Azure Container Apps
-      uses: Azure/container-apps-build-and-deploy@v1
+      uses: Azure/container-apps-build-and-deploy-action@v1
       with:
         resourceGroup: fervjestina
         appSourcePath: consumer
