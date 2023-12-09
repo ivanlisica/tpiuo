@@ -37,4 +37,34 @@ jobs:
 
     - name: Run linters
       uses: wearerequired/lint-action@v2
+
+  build-deploy:
+        runs-on: ubuntu-latest
+    
+        needs:
+            - lint
+            - editorconfig
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        - name: Login to Azure
+          uses: azure/login@v1
+          with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
+        - name: 'Build and push image'
+          uses: azure/docker-login@v1
+          with:
+            login-server: labos1registry.azurecr.io 
+            username: ${{ secrets.ACR_USERNAME }}
+            password: ${{ secrets.ACR_PASSWORD }}
+        - name: Deploy to Azure Container Apps
+          uses: azure/container-apps-deploy-action@v1
+          with:
+            resourceGroup: fervjestina
+            appSourcePath: consumer
+            acrName: labos1registry
+            containerAppName: consumer-app
+      
+        
+                
          
