@@ -61,7 +61,7 @@ jobs:
           uses: azure/container-apps-deploy-action@v1
           with:
             resourceGroup: fervjestina
-            appSourcePath: producer
+            appSourcePath: Producer
             acrName: labos1registry
             containerAppName: producer-app
       
