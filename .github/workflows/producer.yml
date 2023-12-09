@@ -1,4 +1,4 @@
-name: consumer
+name: producer
 
 on:
   push:
