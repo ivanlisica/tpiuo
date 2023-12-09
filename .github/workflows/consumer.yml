@@ -61,7 +61,7 @@ jobs:
       uses: azure/container-apps-deploy-action@v1
       with:
         resourceGroup: fervjestina
-        appSourcePath: consumer
+        appSourcePath: Consumer/consumer.py
         acrName: labos1registry
         containerAppName: consumer-app
   
